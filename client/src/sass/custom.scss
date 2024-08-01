@@ -1,0 +1,41 @@
+$primary : #C2EFD4;
+$secondary : #224F34;
+$danger: #912B32;
+$info: rgb(129, 189, 172);
+$bs-border-width:  0px;
+
+@import 
+'../../node_modules/bootstrap/scss/bootstrap.scss', 
+'../../node_modules/bootstrap/scss/variables';
+
+.form-control{
+  background-color: transparent;
+  border-color: #2b9159;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+.form-control:focus{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.form-control:valid{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 0; 
+}
+
+.form-control::placeholder{
+  color: #a3a3a3;
+}
+
+.table{
+  background-color: transparent;
+}

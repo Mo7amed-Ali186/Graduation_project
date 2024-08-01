@@ -1,0 +1,20 @@
+fastapi
+ipython
+motor
+numpy
+opencv_python
+opencv_python_headless
+pandas
+# Pillow==9.3.0
+Pillow
+pydantic
+pymongo
+python-dotenv
+Requests
+scikit_learn
+# tensorflow
+tqdm
+# ~pencv_python_headless==4.8.1.78
+protobuf
+keras
+python-multipart

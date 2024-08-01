@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: #c2efd4;
+    --secondary-color: #224f34;
+    --danger: #912b32;
+    --info: rgb(129, 189, 172);
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.passHov {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    color: #212529;
+}
+
+li {
+    list-style-type: none;
+}
+
+.tag {
+    margin: 2px;
+}
+
+.passHov:hover {
+    color: #4fa74f;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.product-card:hover {
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+.landing {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    height: 700px;
+    padding: 30px 80px;
+}
+.dropdown-style{
+    background-color: transparent;
+}
+.hideOverFlow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.onlyOneLine{
+    display: 'flex';
+    flex-direction: 'row'
+}
+.landing-title {
+    font-family: "Rufina";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 100px;
+
+    color: #224f34;
+}
+.center-backgroundPosition{
+    background-position: center;
+}
+.landing-paragraph {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 220%;
+    /* or 53px */
+    margin-bottom: 20px;
+
+    color: #267d49;
+}
+
+.product-card {
+    position: relative;
+}
+
+.product-card::after {
+    content: attr(data-discount);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    text-transform: uppercase;
+    background-color: var(--danger);
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Poppins";
+}
+
+.shopping-cart::after {
+    content: attr(data-cart-items-count);
+    position: absolute;
+    padding: 5px;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    align-items: center;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgb(108, 176, 7);
+}
+
+.navbar {
+    background-color: #c2efd4 !important;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: var(--secondary-color) !important;
+}
+
+.recommended-products-section {
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.recommended-products-title {
+    /* Recommended Products */
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 84px;
+
+    color: #224f34;
+}
+
+.section-text {
+    /* Get in on the trend with our curated selection of recommended products. */
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    /* identical to box height */
+
+    color: #224f34;
+}
+
+.model-photo-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .model-photo-container {
+        display: none;
+    }
+    .recommended-products-text {
+        text-wrap: nowrap;
+    }
+}
+
+.feedback-section {
+    height: fit-content;
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #f6f6f6;
+}
+
+.feedback-section-title {
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 84px;
+    align-self: flex-start;
+    color: #224f34;
+    padding: 20px;
+}
+
+.feedback-section-container {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feedback-item:nth-child(2) {
+    background-color: var(--primary-color);
+}
+
+.feedback-item {
+    width: 450px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    flex-grow: 1;
+    margin: 10px;
+    text-align: left;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.feedback-author {
+    font-family: "Roboto Serif";
+    padding: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 26px;
+    /* identical to box height */
+
+    color: #224f34;
+}
+
+.feedback-content {
+    padding: 20px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: rgb(113, 113, 113);
+}
+
+.brands-section {
+    height: fit-content;
+    width: 100%;
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.brands-section-title {
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 84px;
+    align-self: flex-start;
+    color: #224f34;
+    padding: 20px;
+}
+
+.brands-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    flex-wrap: wrap;
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.brand-item:hover {
+    box-shadow: rgba(255, 255, 255, 0.765) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.brand-title {
+    padding: 20px;
+    font-weight: 600;
+}
+
+.brand-image {
+    max-width: "100%";
+    height: "auto";
+    object-fit: "cover";
+}
+
+.section-heading {
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 84px;
+    align-self: flex-start;
+    color: #224f34;
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    .login-image-section {
+        display: none;
+    }
+    .login-form-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.brands-section-text {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.order-card:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}

@@ -1,0 +1,1452 @@
+{
+	"info": {
+		"_postman_id": "9c32a4b3-8520-45a1-891f-0a3ac74679a1",
+		"name": "E_Commerse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26927062",
+		"_collection_link": "https://www.postman.com/altimetry-engineer-834583/workspace/api/collection/26927062-9c32a4b3-8520-45a1-891f-0a3ac74679a1?action=share&source=collection_link&creator=26927062"
+	},
+	"item": [
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "createCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4NjI2MzU5LCJleHAiOjE3MTEyMTgzNTl9.EC7uK_F7ibRlZmmAHwiRELAqJ1Y-3SI2SitrSga7vAo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"productId\" :\"65d78d8cfea62a90d2054e81\",\r\n        \"quantity\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cart/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cleerCart",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4NjI2MzU5LCJleHAiOjE3MTEyMTgzNTl9.EC7uK_F7ibRlZmmAHwiRELAqJ1Y-3SI2SitrSga7vAo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{hosts}}/cart/",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFromCart",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4NjI2MzU5LCJleHAiOjE3MTEyMTgzNTl9.EC7uK_F7ibRlZmmAHwiRELAqJ1Y-3SI2SitrSga7vAo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{hosts}}/cart/65d78d8cfea62a90d2054e81",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"cart",
+								"65d78d8cfea62a90d2054e81"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "createCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhamF2NDI5ODlAbW9seWcuY29tIiwiaWQiOiI2NWQ0OGJkMzE5MGY5MGY1Njg2YTY1Y2QiLCJpYXQiOjE3MDg0MjkxNTAsImV4cCI6MTcxMTAyMTE1MH0.QK6t1Vb9J7q3PV-mIKo6hdQAxa6JcsigSG65Ql-EaPg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "car",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/car-interior-design.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhamF2NDI5ODlAbW9seWcuY29tIiwiaWQiOiI2NWQ0OGJkMzE5MGY5MGY1Njg2YTY1Y2QiLCJpYXQiOjE3MDg0MjkxNTAsImV4cCI6MTcxMTAyMTE1MH0.QK6t1Vb9J7q3PV-mIKo6hdQAxa6JcsigSG65Ql-EaPg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/category/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhamF2NDI5ODlAbW9seWcuY29tIiwiaWQiOiI2NWQ0OGJkMzE5MGY5MGY1Njg2YTY1Y2QiLCJpYXQiOjE3MDg0MjkxNTAsImV4cCI6MTcxMTAyMTE1MH0.QK6t1Vb9J7q3PV-mIKo6hdQAxa6JcsigSG65Ql-EaPg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/category/65d0a284a2bcca8d1b12747a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65d0a284a2bcca8d1b12747a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhamF2NDI5ODlAbW9seWcuY29tIiwiaWQiOiI2NWQ0OGJkMzE5MGY5MGY1Njg2YTY1Y2QiLCJpYXQiOjE3MDg0MjkxNTAsImV4cCI6MTcxMTAyMTE1MH0.QK6t1Vb9J7q3PV-mIKo6hdQAxa6JcsigSG65Ql-EaPg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "car shop",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/cld-sample-3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65d491ae7d597cdac7f67bf6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65d491ae7d597cdac7f67bf6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subCategory",
+			"item": [
+				{
+					"name": "CreatesubCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhamF2NDI5ODlAbW9seWcuY29tIiwiaWQiOiI2NWQ0OGJkMzE5MGY5MGY1Njg2YTY1Y2QiLCJpYXQiOjE3MDg0MjkxNTAsImV4cCI6MTcxMTAyMTE1MH0.QK6t1Vb9J7q3PV-mIKo6hdQAxa6JcsigSG65Ql-EaPg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Pantalone",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/shoes.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65d491ae7d597cdac7f67bf6/subcategory",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65d491ae7d597cdac7f67bf6",
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update subCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhamF2NDI5ODlAbW9seWcuY29tIiwiaWQiOiI2NWQ0OGJkMzE5MGY5MGY1Njg2YTY1Y2QiLCJpYXQiOjE3MDg0MjkxNTAsImV4cCI6MTcxMTAyMTE1MH0.QK6t1Vb9J7q3PV-mIKo6hdQAxa6JcsigSG65Ql-EaPg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jacketllg",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/cld-sample-3.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hosts}}/category/65d491ae7d597cdac7f67bf6/subcategory/65d4a519a143cb89a3fe93b8",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"category",
+								"65d491ae7d597cdac7f67bf6",
+								"subcategory",
+								"65d4a519a143cb89a3fe93b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allSubCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65d491ae7d597cdac7f67bf6/subcategory",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65d491ae7d597cdac7f67bf6",
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "BM1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/leather-bag-gray.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65d491ae7d597cdac7f67bf6/subcategory/65d72f081a8d7f48a5b095b6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65d491ae7d597cdac7f67bf6",
+								"subcategory",
+								"65d72f081a8d7f48a5b095b6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupon",
+			"item": [
+				{
+					"name": "createCoupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mo7amed889",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "expireIn",
+									"value": "2025-8-01 12:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/coupon/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"coupon",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allcoupon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/coupon/",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"coupon",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCoupon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/coupon/65d78ab3ab9f725ff80422c1",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"coupon",
+								"65d78ab3ab9f725ff80422c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCoupon",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "shoeses",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/OneDrive/الصور/Screenshots/Screenshot 2023-07-12 014214.png",
+									"disabled": true
+								},
+								{
+									"key": "amount",
+									"value": "20",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hosts}}/coupon/65d78ab3ab9f725ff80422c1",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"coupon",
+								"65d78ab3ab9f725ff80422c1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "createBrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "koko&n",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/cld-sample-2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hosts}}/brand/",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"brand",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allBrand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/brand/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"brand",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBrand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/brand/65d731b61a8d7f48a5b095d0",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"brand",
+								"65d731b61a8d7f48a5b095d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBrand",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "koko8",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/car-interior-design.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/brand/65d738c66a51a8ea7aa1d6eb",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"brand",
+								"65d738c66a51a8ea7aa1d6eb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\":\"mohamed_ali7\",\r\n  \"email\":\"xoxab48695@artgulin.com\",\r\n  \"password\":\"12Mohamed$22\",\r\n  \"cPassword\":\"12Mohamed$22\",\r\n  \"role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/auth/signUp",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"xoxab48695@artgulin.com\",\r\n  \"password\":\"12Mohamed$22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/logIn",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"logIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendCode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"email\":\"m07amedali2345@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/sendCode",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"sendCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"code\":\"01850\", \r\n   \"password\":\"12Mohamed$236\",\r\n  \"cPassword\":\"12Mohamed$236\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/forgetPassword/m07amedali2345@gmail.com",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"forgetPassword",
+								"m07amedali2345@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzRAZ21haWwuY29tIiwiaWQiOiI2NWQwYTIxM2EyYmNjYThkMWIxMjc0NzMiLCJpYXQiOjE3MDgxNzE4MzEsImV4cCI6MTcxMDc2MzgzMX0.aOmg_x_cEW3LJGHPVL8-9pVkmp34l0kdOQ0RwzmNXB8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "shoose",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25000",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "65d0a284a2bcca8d1b12747a",
+									"type": "text"
+								},
+								{
+									"key": "subCategoryId",
+									"value": "65d0a317a2bcca8d1b127480",
+									"type": "text"
+								},
+								{
+									"key": "brandId",
+									"value": "65d0a382a2bcca8d1b127486",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "50",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/ma042/Downloads/analog-classic.jpg"
+								},
+								{
+									"key": "subImage",
+									"type": "file",
+									"src": [
+										"/C:/Users/ma042/Downloads/cld-sample-4.jpg",
+										"/C:/Users/ma042/Downloads/cld-sample-5.jpg"
+									]
+								},
+								{
+									"key": "subImage",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "Large",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "[\"red\",\"blue\", \"JavaScript\", \"MongoDB\",\"React\",\"css\"]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hosts}}/product/",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iPhone 15",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stock",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "65b6e6199e0839f43394c0b3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subCategoryId",
+									"value": "65b91f497a37a8805f2397db",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "brandId",
+									"value": "65b917b91eec57b82b2141b4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "discount",
+									"value": "50",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/ma042/OneDrive/الصور/Screenshots/PdfImage.png",
+									"disabled": true
+								},
+								{
+									"key": "subImage",
+									"type": "file",
+									"src": [
+										"/C:/Users/ma042/OneDrive/الصور/Screenshots/Screenshot 2023-10-30 165112.png",
+										"/C:/Users/ma042/OneDrive/الصور/Screenshots/Screenshot 2023-10-30 165524.png"
+									],
+									"disabled": true
+								},
+								{
+									"key": "subImage",
+									"type": "file",
+									"src": "/C:/Users/ma042/OneDrive/الصور/Screenshots/Screenshot 2023-05-30 153349.png",
+									"disabled": true
+								},
+								{
+									"key": "size[0]",
+									"value": "15",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "colors[0]",
+									"value": "red",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hosts}}/product/65d78f9b00ce1b439bb820b1",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"product",
+								"65d78f9b00ce1b439bb820b1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/product/",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/product/65d0a417a2bcca8d1b12748e",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"product",
+								"65d0a417a2bcca8d1b12748e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hosts}}/product/65d0a417a2bcca8d1b12748e",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"product",
+								"65d0a417a2bcca8d1b12748e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4MTcxNzU1LCJleHAiOjE3MTA3NjM3NTV9.u7wW9Md2qcQczOFwpQGN1Xa-oG0jnzSCj1rqgoLHu4k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\":\"8089 AlMadi Alm3rage\",\r\n    \"phone\":[\r\n        \"01141283971\"\r\n    ],\r\n    // \"couponName\":\"a7dff9777777\",\r\n    \"paymentTypes\":\"card\",\r\n  \"products\":[{\r\n        \"productId\" :\"65d78f9b00ce1b439bb820b1\",\r\n        \"quantity\":2\r\n}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelOrder",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4ODU3ODM0LCJleHAiOjE3MTE0NDk4MzR9.g2tygt5IiTD6Cmh24wK4YR-gbWw_7YeKJ9JvUN_3Q18",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order/65d9d00112c77b8800b14cd2/canceled",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"65d9d00112c77b8800b14cd2",
+								"canceled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deliveredOrder",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4ODU3ODM0LCJleHAiOjE3MTE0NDk4MzR9.g2tygt5IiTD6Cmh24wK4YR-gbWw_7YeKJ9JvUN_3Q18",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order/65d0b748324592f81ba9d47a/delivered",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"65d0b748324592f81ba9d47a",
+								"delivered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rejectOrder",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0wN2FtZWRhbGkyMzQ1QGdtYWlsLmNvbSIsImlkIjoiNjVkMGExYmZhMmJjY2E4ZDFiMTI3NDZlIiwiaWF0IjoxNzA4ODU3ODM0LCJleHAiOjE3MTE0NDk4MzR9.g2tygt5IiTD6Cmh24wK4YR-gbWw_7YeKJ9JvUN_3Q18",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order/65db1d4867c7981846af2e4c/rejected",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"65db1d4867c7981846af2e4c",
+								"rejected"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "COMPANY__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhcmF5ODE2NDBAbGF5bXJvLmNvbSIsImlkIjoiNjVjNDExODgxZmNhODlmZGE1NzM4ZWY1IiwiaWF0IjoxNzA3MzQ4MzkyLCJleHAiOjE3MDk5NDAzOTJ9.a8V9Rko1ErzalDvTfIShh17HdiprDAkYetEEYR6VlIc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"M07amed\",\r\n    \"email\": \"varay81640@laymro.com\",\r\n    \"DOB\": \"2001-07-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/user",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDelete",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "COMPANY__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlpa2Fsb241MzVAZ2lyYXRleC5jb20iLCJpZCI6IjY1YzBkYzM2ZTViZWYzNmNjNzAwZTYxYSIsImlhdCI6MTcwNzEzODE4NCwiZXhwIjoxNzA5NzMwMTg0fQ.Z6viJaHX3hotSYI0pVe1DktXG_dl7m1Ic4VI3LJgqio",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/user/softDelete",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user",
+								"softDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "COMPANY__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlpa2Fsb241MzVAZ2lydGV4LmNvbSIsImlkIjoiNjVjMTcyMmQxNDhmOTRlMzU5NTA2YThhIiwiaWF0IjoxNzA3MjYxMzg4LCJleHAiOjE3MDk4NTMzODh9.xwz8ycwJPZMcfDzUTdMmPOtT_sV3e5J3M3mI7u6G5kE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/user/deleteAccount",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserAccountData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/user/getUserAccountData",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user",
+								"getUserAccountData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProfileData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "COMPANY__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlpa2Fsb241MzVAZ2lyYXRleC5jb20iLCJpZCI6IjY1YzBkYzM2ZTViZWYzNmNjNzAwZTYxYSIsImlhdCI6MTcwNzEzODE4NCwiZXhwIjoxNzA5NzMwMTg0fQ.Z6viJaHX3hotSYI0pVe1DktXG_dl7m1Ic4VI3LJgqio",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/getProfileData?userName=mohamed_ali7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"getProfileData"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "65c412ba1fca89fda5738f0e",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "com",
+									"disabled": true
+								},
+								{
+									"key": "userName",
+									"value": "mohamed_ali7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUserAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "E_COMMERCE__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhveGFiNDg2OTVAYXJ0Z3VsaW4uY29tIiwiaWQiOiI2NWU3NWM5MWRkNTQ5Yzc4OGJmMWQxMTciLCJpYXQiOjE3MDk2NjEzNzgsImV4cCI6MTcxMjI1MzM3OH0.GDbfeF3fwlc5f6uWUxBgAq6PkdcVnzxXRBNshieAdOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\":\"mohamed_ali7\",\r\n  \"email\":\"xoxab48695@arht.com\",\r\n  \"password\":\"12Mohamed$22\",\r\n  \"cPassword\":\"12Mohamed$22\",\r\n  \"role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/user/",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToWishList",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hosts}}/user/addToWishList/65d78d29d2ef8b95ef449705",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user",
+								"addToWishList",
+								"65d78d29d2ef8b95ef449705"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hosts}}/user/removeFromWishList/65d78d29d2ef8b95ef449705",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"user",
+								"removeFromWishList",
+								"65d78d29d2ef8b95ef449705"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
